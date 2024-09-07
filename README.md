@@ -1,2 +1,0 @@
-# Stasjon-r-pc
-Programering

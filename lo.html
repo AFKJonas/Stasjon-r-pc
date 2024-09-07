@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF4</title>
+</head>
+<body>
+
+    <p id="utskrift"></p>
+
+    <script>
+        // Trinn 3: Opprett variabler med karakterer
+        let ITF19019_grade = "A";
+        let ITF10511_grade = "F";
+
+        // Trinn 4: Bestem om kursene er bestått
+        let ITF19019_passed = ITF19019_grade === "F" ? false : true;
+        let ITF10511_passed = ITF10511_grade === "F" ? false : true;
+
+        // Trinn 5: Tell antall beståtte kurs
+        let countPassed = 0;
+
+        if (ITF19019_passed) countPassed++;
+        if (ITF10511_passed) countPassed++;
+
+        // Trinn 7: Lag meldingen med template literals
+        let printText = `Du har bestått ${countPassed} av 2 kurs`;
+
+        // Trinn 8: Skriv ut meldingen i <p>-tagen
+        document.getElementById("utskrift").innerText = printText;
+    </script>
+
+</body>
+</html>

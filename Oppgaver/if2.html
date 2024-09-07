@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 2</title>
+</head>
+<body>
+        <p id="text"></p>
+
+    <script>
+        const age = 18;
+        let text;
+        
+        if (age <= 17 ) {
+            text = "Du er ikke myndig";
+        } else if (age <= 62 && age > 17) {
+            text = "Du er myndig og klar for studier eller arbeidslivet";
+        } else if (age > 62) {
+            text = "Du er pensjonsklar!";
+        }
+
+        document.getElementById("text").innerHTML = text;
+
+
+
+
+    </script>
+    
+</body>
+</html>
