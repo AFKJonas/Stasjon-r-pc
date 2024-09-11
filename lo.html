@@ -6,30 +6,21 @@
     <title>IF4</title>
 </head>
 <body>
-
-    <p id="utskrift"></p>
-
-    <script>
-        // Trinn 3: Opprett variabler med karakterer
-        let ITF19019_grade = "A";
-        let ITF10511_grade = "F";
-
-        // Trinn 4: Bestem om kursene er bestått
-        let ITF19019_passed = ITF19019_grade === "F" ? false : true;
-        let ITF10511_passed = ITF10511_grade === "F" ? false : true;
-
-        // Trinn 5: Tell antall beståtte kurs
-        let countPassed = 0;
-
-        if (ITF19019_passed) countPassed++;
-        if (ITF10511_passed) countPassed++;
-
-        // Trinn 7: Lag meldingen med template literals
-        let printText = `Du har bestått ${countPassed} av 2 kurs`;
-
-        // Trinn 8: Skriv ut meldingen i <p>-tagen
-        document.getElementById("utskrift").innerText = printText;
-    </script>
+    <ol>
+        <!-- Endret: Legg til <li> rundt hele listen for å sikre riktig HTML-struktur -->
+        <li id="shoppinglist"></li> 
+      </ol>
+      
+      <script>
+        const shoppingList = ["Brød", "Egg", "Melk", "Sjokolade"];
+      
+        // Splicing the array on index 2, inserting "Ost" and "Syltetøy"
+        shoppingList.splice(0, 1, "Ost", "Syltetøy");
+      
+        // Endret: Riktig HTML-struktur for listeelementer
+        // La til <li> i starten og </li> på slutten av den samlede strengen
+        document.getElementById("shoppinglist").innerHTML = "<li>" + shoppingList.join("</li><li>") + "</li>";
+      </script>
 
 </body>
 </html>
